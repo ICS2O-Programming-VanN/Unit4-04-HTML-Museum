@@ -31,7 +31,7 @@ function displayCost() {
   		cost = "You get a discount! (Student Pricing)"
       // ELSE IF checks that user did not leave it on "[Day of the Week]", displays regular price if they aren't getting in free or discounted
   	} else if (day != "") {
-  		cost = "You have to pay regular price."
+  		cost = "You have to pay the regular price."
       // ELSE the user did not choose a day from the drop down menu
     } else {
       cost = "Please enter a valid day."
