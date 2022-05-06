@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<!-- Meta Data -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Museum Admission, with JavaScript" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Van" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+		<!-- Google's MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-purple.min.css" />
+    <!-- Links to CSS file -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Website title -->
+    <title>Museum Admission, with JavaScript</title>
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Links to JS file -->
+    <script src="./js/script.js"></script>
+    <!-- MDL Heading -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout-title">
+          <span class="mdl-layout-title">Museum Admission Website, with JavaScript</span>
+        </div>
+      </header>
+			<!-- Heading (Instructions) -->
+      <main class="mdl-layout__content">
+        <h3>Please Enter the following below:</h3>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Enter your age!</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <!-- Input for user's age -->
+            <input
+              class="mdl-textfield__input"
+              type="number"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              step="1"
+              min="1"
+              id="age"
+            />
+            <label class="mdl-textfield__label" for="age">Age...</label>
+            <!-- Invalid input error -->
+            <span class="mdl-textfield__error">Input is not valid!</span>
+          </div>
+        </form>
+        <form>
+          <!-- Drop Down Menu -->
+            <p>Select the day!</p>
+            <label for="day">Day:</label>
+            <select name="day" id="day">
+              <option value="">[Day of the Week]</option>
+              <option value="Sunday">Sunday</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+  					</select>
+  					<br><br>
+        </form>
+        <!-- Raised button with ripple (also calls function) -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="displayCost()">
+          Submit
+        </button>
+        <p>
+          <!-- Output from script.js file -->
+          <div id="output">
+            <div id="display-results"></div>
+          </div>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
